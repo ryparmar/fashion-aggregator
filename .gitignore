@@ -1,0 +1,7 @@
+./similar-projects.txt
+./notebooks/.ipynb_checkpoints
+./fashion_aggergator/__pycache__/
+./fashion_aggergator/data/photos/*
+./fashion_aggergator/artifacts/img-embeddings/*
+./fashion_aggergator/artifacts/img-encoder/*
+./fashion_aggergator/app_gradio/__pycache__/

@@ -1,4 +1,4 @@
-# A simple projects that aggregate second-hand shops offerings
+# A simple projects that aggregate second-hand shops offerings 👕
 
 ## TBD
 

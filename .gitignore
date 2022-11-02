@@ -1,7 +1,14 @@
+./python-version
 ./similar-projects.txt
+./todo.txt
 ./notebooks/.ipynb_checkpoints
-./fashion_aggergator/__pycache__/
+./.pytest_cache
+**/__pycache__
+**/.vscode
+**/logs
 ./fashion_aggergator/data/photos/*
 ./fashion_aggergator/artifacts/img-embeddings/*
 ./fashion_aggergator/artifacts/img-encoder/*
-./fashion_aggergator/app_gradio/__pycache__/
+./scraper/fashion/data
+./scraper/fashion/crawls
+./scraper/fashion/*.log

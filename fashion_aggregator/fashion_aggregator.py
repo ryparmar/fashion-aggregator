@@ -12,7 +12,9 @@ from pathlib import Path
 from typing import List, Any, Dict
 from PIL import Image
 
+from transformers import AutoTokenizer
 from sentence_transformers import SentenceTransformer, util
+from multilingual_clip import pt_multilingual_clip
 import torch
 
 
@@ -27,15 +29,16 @@ EMBEDDINGS_FILE = "embeddings.pkl"
 class TextEncoder:
     """Encodes the given text"""
 
-    def __init__(self, model_path='clip-ViT-B-32-multilingual-v1'):
+    def __init__(self, model_path='M-CLIP/XLM-Roberta-Large-Vit-B-32'):
         if model_path is None:
             model_path = STAGED_TEXT_ENCODER_MODEL_DIRNAME / MODEL_FILE
-        self.model = SentenceTransformer(model_path)
+        self.model = pt_multilingual_clip.MultilingualCLIP.from_pretrained(model_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
     @torch.no_grad()
     def encode(self, query: str) -> torch.Tensor:
         """Predict/infer text embedding for a given query."""
-        query_emb = self.model.encode([query], convert_to_tensor=True, show_progress_bar=False)
+        query_emb = query_emb = self.model.forward([query], self.tokenizer)
         return query_emb
 
 

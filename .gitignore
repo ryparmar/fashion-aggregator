@@ -1,7 +1,7 @@
 ./python-version
 ./similar-projects.txt
 ./todo.txt
-./notebooks/.ipynb_checkpoints
+**/.ipynb_checkpoints
 ./.pytest_cache
 **/__pycache__
 **/.vscode

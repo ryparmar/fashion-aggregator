@@ -12,6 +12,7 @@
 - https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1
 - https://huggingface.co/CompVis/stable-diffusion-v1-4
 - https://github.com/openai/CLIP
+- https://github.com/FreddeFrallan/Multilingual-CLIP  multilingual CLIP
 
 
 ### Experiments

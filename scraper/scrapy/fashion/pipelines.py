@@ -10,7 +10,7 @@ from scrapy.pipelines.images import ImagesPipeline
 # from itemadapter import ItemAdapter
 from scrapy.exceptions import DropItem
 
-class UnimodaPipeline(ImagesPipeline):
+class FashionImagePipeline(ImagesPipeline):
 
     def get_media_requests(self, item, info):
         return Request(
@@ -21,7 +21,7 @@ class UnimodaPipeline(ImagesPipeline):
         )
 
     def file_path(self, request, response=None, info=None, item=None) -> str:
-        return os.path.join(info.spider.name, item["category"], item["subcategory"], f"{request.meta['img_name']}.jpg")
+        return os.path.join(info.spider.name, item.get("category", None), item.get("subcategory", None), f"{request.meta['img_name']}.jpg")
 
     # def item_completed(self, results, item, info):
     #     file_paths = [x['path'] for ok, x in results if ok]

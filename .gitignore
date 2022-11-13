@@ -7,9 +7,8 @@
 **/.vscode
 **/logs
 **/.python-version
-./fashion_aggergator/data/photos/*
-./fashion_aggergator/artifacts/**
-./fashion_aggergator/data/**
-./scraper/**/data
-./scraper/**/crawls
-./scraper/**/*.log
+fashion_aggergator/artifacts/**
+fashion_aggergator/data/**
+scraper/**/data
+scraper/**/crawls
+scraper/**/*.log
